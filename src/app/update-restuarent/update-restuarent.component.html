@@ -1,0 +1,38 @@
+<form #updateRestDetails="ngForm">
+    
+<div class="row  p-5 w-75 container-fluid  m-5 p-2 ">
+    <h1 class="text-center text-light">Update Restaurent Details</h1>
+    <div class="col-4  ms-5 ">
+        <input [(ngModel)]="restDeatils['id']" name="id" placeholder="Restaurent Id" type="text " class="text form-control m-1 ms-5 ">
+        <input  [(ngModel)]="restDeatils['neighborhood']" name="neighborhood" placeholder="Restaurent Neighbourhood" type="text" class="text form-control m-1  ms-5 ">
+        <input  [(ngModel)]="restDeatils['photograph']" name="photograph" placeholder="Restaurent Image" type="text" class="text form-control m-1  ms-5 ">
+        <h2 class="ms-5 text-light ">Operating Hours</h2>
+        <input [(ngModel)]="restDeatils['operating_hours']['Monday']"   name="Monday" placeholder="Monday" type="text" class="text form-control m-1  ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Tuesday']"  name="Tuesday" placeholder="Tuesday" type="text" class="text form-control m-1  ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Wednesday']"  name="Wednesday" placeholder="Wednesday" type="text" class="text form-control m-1 ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Thursday']"   name="Thursday" placeholder="Thursday" type="text" class="text form-control m-1 ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Friday']"   name="Friday" placeholder="Friday" type="text" class="text form-control m-1 ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Saturday']"   name="Saturday" placeholder="saturday" type="text" class="text form-control m-1 ms-5 ">
+        <input [(ngModel)]="restDeatils['operating_hours']['Sunday']"  name="Sunday" placeholder="sunday" type="text" class="text form-control m-1 ms-5">
+    </div>
+    <div class="col-4 ms-5 ">
+        <input  [(ngModel)]="restDeatils['name']"  name="Rname" placeholder="Restaurent Name" type="text" class="text form-control m-1 ms-5 ">
+        <input  [(ngModel)]="restDeatils['address']"  name="address" placeholder="Restaurent Address" type="text" class="text form-control m-1 ms-5">
+        <input  [(ngModel)]="restDeatils['cuisine_type']"  name="cuisine_type" placeholder="Restaurent Cusine Type" type="text" class="text form-control m-1 ms-5 ">
+        <h3 class="ms-5 text-light">Reviews</h3>
+        <div  *ngFor="let item of restDeatils.reviews">
+        <input [(ngModel)]="restDeatils['reviews'][0]['name']"  name="Cname" placeholder="Name" type="text" class="text form-control m-1 ms-5 ">
+        <input  [(ngModel)]="restDeatils['reviews'][0]['date']"  name="date" placeholder="date" type="text" class="text form-control m-1 ms-5 ">
+        <input [(ngModel)]="restDeatils['reviews'][0]['rating']" name="rating"  placeholder="Rating" type="text" class="text form-control m-1 ms-5">
+        <input  [(ngModel)]="restDeatils['reviews'][0]['comments']"  name="comments" placeholder="Comments" type="text" class="text form-control m-1 ms-5 ">
+    </div>
+        <h4 class="ms-5 text-light">locations</h4>
+        <input [(ngModel)]="restDeatils['latlng']['lat']"  name="lat" placeholder="Latitude" type="text" class="text form-control m-1 ms-5">
+        <input [(ngModel)]="restDeatils['latlng']['lng']"  name="lng" placeholder="Longitude" type="text" class="text form-control m-1 ms-5 ">
+    </div>
+    <div class="mt-3" style=" margin-left:380px; border-radius:0ch;">
+<button (click)="updateRestaurent(updateRestDetails)" style="border-radius:5px ;" type="button"> Update</button>
+</div>
+</div>
+
+</form>

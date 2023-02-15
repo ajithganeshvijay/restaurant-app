@@ -1,0 +1,39 @@
+
+  \{^_^}/ hi!
+
+  Loading src/assets/Database/db.json
+  Done
+
+  Resources
+  http://localhost:3000/restaurants
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+Some error occurred Error: listen EADDRINUSE: address already in use ::1:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1485:16)
+    at listenInCluster (node:net:1533:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (node:net:1682:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:8) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+
+  \{^_^}/ hi!
+
+  Loading src/assets/Database/db.json
+  Done
+
+  Resources
+  http://localhost:3000/restaurants
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+[0mGET /__rules [33m404[0m 2.431 ms - 2[0m
+[0mGET /db [32m200[0m 4.496 ms - -[0m
